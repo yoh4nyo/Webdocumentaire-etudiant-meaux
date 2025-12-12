@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(235, 136, 101);
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    font-size: 2rem;
+}
+
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: #cf7351;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050;
+}
+
+h1, h4, p, ul, li, h3, h2 {
+    font-family: "Poppins";
+}
+
+h2 {
+    color: black;
+}
+
+.offcanvas-menu.active {
+    right: 0;
+}
+
+.offcanvas-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.offcanvas-menu a:hover {
+    background-color: #ad6044;
+}
+
+.home-icon {
+    font-size: 24px;
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.hamburger-icon {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.home-icon:hover {
+    color: #cf7351;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Galerie */
+.gallery-title {
+    font-family: "Poppins";
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modalContent {
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#modalCaption {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+#closeModal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.ulm-card {
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.ulm-card:hover {
+    transform: scale(1.02);
+}
+
+.detail-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.detail-text {
+    flex-grow: 1;
+}
+
+.description-details {
+    padding: 0 15px;
+}

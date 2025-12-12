@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b71dea2871.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/logo_iut.ico">
+    <link href="css/style_galerie.css" rel="stylesheet">
+</head>
+<body>
+<!-- Barre de navigation avec le bouton de son -->
+<div class="navbar">
+    <a href="accueil.html" class="home-icon" title="Retour à l'accueil">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Icône hamburger pour le menu -->
+    <div class="hamburger-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+<!-- Menu Hamburger -->
+<div id="offcanvasMenu" class="offcanvas-menu">
+    <a href="javascript:void(0)" onclick="toggleMenu()">×</a>
+    <a href="portrait_yannis.html">Yannis Camelin, un étudiant entre liberté et réalité</a>
+    <a href="le_crous_soutien_étudiant.html">Le crous : un soutien essentiel pour les étudiants</a>
+    <a href="la_situation_étudiante.html">La situation financière étudiante</a>
+    <a href="l\'aide_précieuse_sociaux.html">L'aide précieuse des services sociaux</a>
+</div>
+
+<!-- Titre de la galerie -->
+<div class="gallery-title">Galerie</div>
+
+<div class="container-fluid mt-4">
+    <div class="row mx-3">
+
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/devanture_iut.jpg')">
+                <img src="img/devanture_iut.jpg" alt="Image 1">
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/hall_meaux.jpg')">
+                <img src="img/hall_meaux.jpg" alt="Image 2">
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/porte_iut.jpg')">
+                <img src="img/porte_iut.jpg" alt="Image 3">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Deuxième ligne -->
+    <div class="row mx-3">
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/couloir_iut.jpg')">
+                <img src="img/couloir_iut.jpg" alt="Image 4">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/crous_iut.jpg')">
+                <img src="img/crous_iut.jpg" alt="Image 5">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/micro_onde_crous.jpg')">
+                <img src="img/micro_onde_crous.jpg" alt="Image 6">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-3">
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/photo_amphi.jpg')">
+                <img src="img/photo_amphi.jpg" alt="Image 4">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/photo_escalier.jpg')">
+                <img src="img/photo_escalier.jpg" alt="Image 5">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/box_iut.png')">
+                <img src="img/box_iut.PNG" alt="Image 6">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-3">
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/hall_etage1.jpg')">
+                <img src="img/hall_etage1.PNG" alt="Image 4">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/hall_distributeur.jpg')">
+                <img src="img/hall_distributeur.jpg" alt="Image 5">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="image-container rounded rounded-3" onclick="openModal('img/pause_dej.png')">
+                <img src="img/pause_dej.PNG" alt="Image 6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="ulm_class" class="ulm-section py-5">
+    <div class="container">
+
+        <h2 class="mb-5 text-center fw-bold">Les frigos !</h2>
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="mathiasFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/mathias/2.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Mathias 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/mathias/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Mathias 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/mathias/4.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Mathias 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mathiasFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mathiasFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Mathias</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 19 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> 4 personnes 
+                                    <small class="text-muted d-block">(dont 1 grand frère)</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Non boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="abiFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/abi/2.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Abi 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/abi/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Abi 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/abi/4.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Abi 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#abiFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#abiFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Abi</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 19 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> 4 personnes 
+                                    <small class="text-muted d-block">(dont 1 grande soeur)</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Non boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="yohanFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/yohan/2.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Yohan 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/yohan/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Yohan 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#yohanFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#yohanFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Yohan</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 19 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> 4 personnes 
+                                    <small class="text-muted d-block">(dont 1 petit frère)</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="dorianFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/dorian/2.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Dorian 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/dorian/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Dorian 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#dorianFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#dorianFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Dorian</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 18 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> 4 personnes 
+                                    <small class="text-muted d-block">(dont 1 petite soeur)</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="axelleFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/axelle/2.png" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Axelle 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/axelle/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Axelle 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#axelleFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#axelleFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Axelle</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 20 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> vie seule 
+                                    <small class="text-muted d-block"></small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Non boursière
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="alexandreFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/alexandre/2.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Alexandre 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/alexandre/3.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Alexandre 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#alexandreFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#alexandreFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Alexandre</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 19 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> Parent divorcé 
+                                    <small class="text-muted d-block"></small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Non boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="ulm-card mb-5 d-flex py-3 rounded shadow-sm">
+                <div id="yannisFrigoCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 300px;">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="img/frigo/yannis/frigo2_yannis.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Yannis 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/frigo/yannis/frigo_yannis.jpg" class="d-block w-100 carousel-image" data-bs-toggle="modal" data-bs-target="#imageModal" alt="Frigo Yannis 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#yannisFrigoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#yannisFrigoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="vr mx-3"></div>
+                <div class="description-section flex-grow-1">
+                    <h3 class="h3_ulm mb-4 pb-2 border-bottom">Frigo de Yannis</h3>
+                    <div class="description-details">
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-cake-candles fa-xl me-3 text-primary"></i>
+                                <span class="detail-text">
+                                    <strong>Âge :</strong> 20 ans
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-house fa-xl me-3 text-success"></i>
+                                <span class="detail-text">
+                                    <strong>Foyer :</strong> Appartement crous avec un colocataire
+                                    <small class="text-muted d-block"></small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-graduation-cap fa-xl me-3 text-warning"></i>
+                                <span class="detail-text">
+                                    <strong>Statut :</strong> Boursier
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+</div>
+</section>
+
+
+    
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid" alt="Image agrandie">
+                <div id="modalCaption" class="mt-2 text-muted"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('offcanvasMenu');
+        menu.classList.toggle('active');
+    }
+
+    function openModal(imageSrc, caption = '') {
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        
+        modalImage.src = imageSrc;
+        
+        // N'afficher la caption que si c'est une image de la galerie
+        if (caption) {
+            modalCaption.textContent = caption;
+            modalCaption.style.display = 'block';
+        } else {
+            modalCaption.textContent = '';
+            modalCaption.style.display = 'none';
+        }
+        
+        // Utiliser la méthode modale de Bootstrap
+        var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        imageModal.show();
+    }
+
+    function getDefaultCaption(imageSrc) {
+        const captions = {
+            'devanture_iut.jpg': 'Devanture de l\'IUT',
+            'hall_meaux.jpg': 'Hall principal',
+            'porte_iut.jpg': 'Porte d\'entrée de l\'établissement',
+            'couloir_iut.jpg': 'Couloir de l\'IUT',
+            'crous_iut.jpg': 'Réfectoire du CROUS',
+            'micro_onde_crous.jpg': 'Espace micro-ondes du CROUS',
+            'photo_amphi.jpg': 'Amphithéâtre Bossuet',
+            'photo_escalier.jpg': 'Escalier de l\'IUT',
+            'box_iut.PNG': 'Couloir et box de l\'étage 4 de l\'IUT',
+            'hall_etage1.PNG': 'Étage 1 de l\'IUT',
+            'hall_distributeur.jpg': 'Distributeur du Hall',
+            'pause_dej.PNG': 'Coin banc de l\'IUT',
+        };
+
+        const fileName = imageSrc.split('/').pop();
+        return captions[fileName] || '';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    document.querySelectorAll('.image-container').forEach(container => {
+        container.onclick = function() {
+            const img = this.querySelector('img');
+            const caption = getDefaultCaption(img.src);
+            openModal(img.src, caption);
+        };
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselImages = document.querySelectorAll('.carousel-image');
+
+        carouselImages.forEach(image => {
+            image.addEventListener('click', function() {
+                openModal(this.src);
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

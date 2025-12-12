@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(235, 136, 101);
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+}
+.navbar-brand i {
+    font-size: 2rem;
+}
+
+h1, h4, p, ul, li, h3 {
+    display: block;
+    font-family: "Poppins";
+}
+
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: #cf7351;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050;
+}
+
+.offcanvas-menu.active {
+    right: 0;
+}
+
+.offcanvas-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.offcanvas-menu a:hover {
+    background-color: #ad6044;
+}
+
+.hamburger-icon {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.home-icon {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.home-icon:hover {
+    color: #cf7351;
+}
+
+:root {
+    --primary-orange: #FF6B35;
+    --secondary-blue: #3498db;
+    --text-color: #333;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(87, 95, 87, 0.1) 0%, rgba(87, 95, 87, 0.3) 100%);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+}
+
+.article-hero {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.article-container {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+.section-divider {
+    border: none;
+    height: 10px;
+    background: linear-gradient(to right, var(--primary-orange), var(--secondary-blue));
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: var(--primary-orange);
+}
+
+.custom-padding {
+    padding-top: 35px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 5px;
+}
+
+.padding-title{
+    padding-left: 150px;
+}
+
+.justifier {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .card-deck {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-icon {
+        font-size: 20px;
+        top: 15px;
+        left: 15px;
+    }
+    
+}

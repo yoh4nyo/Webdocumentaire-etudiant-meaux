@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(235, 136, 101);
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+}
+
+
+.home-icon {
+    font-size: 24px;
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.home-icon:hover {
+    color: #cf7351;
+}
+
+.container {
+    margin-top: 158px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    transition: opacity 1s ease-in-out;
+    background-image: url("../img/hall_meaux_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-1 {
+    background-color: #ffb3b3; /* Pastel Rose */
+}
+
+.card-2 {
+    background-color: #b3e0ff; /* Pastel Bleu */
+}
+
+.card-3 {
+    background-color: #b3ffb3; /* Pastel Vert */
+}
+
+.card-4 {
+    background-color: #ffcc99; /* Pastel Orange */
+}
+
+.card-5 {
+    background-color: #ffb3e6; /* Pastel Lilas */
+}
+
+/* Les couleurs de texte peuvent être ajustées si nécessaire pour assurer un bon contraste */
+.card-body h5 {
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #333333; /* Texte sombre pour bien ressortir sur le fond pastel */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+.card-img:hover {
+    opacity: 0.85;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(192, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.card-body h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+
+.card-deck {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-deck {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-icon {
+        font-size: 20px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.sound-controls {
+    display: flex;
+    align-items: center;
+}
+
+.sound-controls .form-range {
+    width: 100px;
+    margin-left: 10px;
+}
+
+#soundIcon {
+    color: #ffffff;
+}
+
+#soundIcon:hover {
+    color: #e2997e;
+}
+
+
+.btn-outline-light {
+    --bs-btn-hover-bg:#cf7351;
+}

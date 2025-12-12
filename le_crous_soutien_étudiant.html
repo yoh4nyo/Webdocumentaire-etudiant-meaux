@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b71dea2871.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/img/logo_iut.ico">
+    <link href="css/style_article_crous.css" rel="stylesheet">
+    <title>Le crous, un soutien essentiel pour les étudiants</title>
+</head>
+<body>
+    <!-- Barre de navigation avec le bouton de son -->
+    <div class="navbar">
+        <a href="accueil.html" class="home-icon" title="Retour à l'accueil">
+            <i class="fas fa-home"></i>
+        </a>
+
+        <div class="sound-controls">
+            <button id="soundToggle" class="btn btn-outline-light sound-btn" title="Activer/Désactiver le son">
+                <i id="soundIcon" class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" class="form-range">
+        </div>
+
+        <!-- Icône hamburger pour le menu -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Menu Hamburger -->
+    <div id="offcanvasMenu" class="offcanvas-menu">
+        <a href="javascript:void(0)" onclick="toggleMenu()">×</a>
+        <a href="portrait_yannis.html">Yannis Camelin, un étudiant entre liberté et réalité</a>
+        <a href="la_situation_financière_étudiante.html">La situation financière étudiante</a>
+        <a href="l'aide_précieuse_sociaux.html">L'aide précieuse des services sociaux</a>
+        <a href="galerie.html">Galerie</a>
+    </div>
+
+
+
+    <div class="container">
+        <div class="article-container mb-5">
+            
+            <div class="profile-details" id="profileDetails">
+            </div>
+
+            <hr class="section-divider">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container mt-2 rounded-3 px-4 titre text-center fw-bold" style="max-width: 1000px;">
+                        <h1 class="display-3 fw-bold">Le Crous : Un soutien essentiel pour les étudiants</h1>
+                    </div>
+                    <div class="text-center my-4">
+                        <iframe src="https://www.youtube.com/embed/z64WI6uzKn4" width="660" height="415" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                        <p class="fs-4 custom-padding justifier">
+                            Le Centre régional des œuvres universitaires et scolaires (Crous) joue un rôle essentiel dans la vie des étudiants en France. Avec pour mission de favoriser la réussite des étudiants, il leur offre un accès plus facile aux services de restauration, logement et bourses, ainsi qu'un accompagnement social. Commençons par examiner l’impact du Crous au niveau national, puis jetons un œil sur le Crous de l’IUT de Meaux.
+                            <br>
+                        </p>
+                        <hr class="section-divider">
+            
+                        <h3 class="fw-bold padding-title">Restauration : une offre abordable et accessible</h3>
+                        <div class="text-center my-4">
+                            <img src="img/crous_restauration.PNG" class="img-fluid rounded" style="max-width: 80%; height: auto;">
+                        </div>
+                        <p class="fs-4 custom-padding justifier">
+                            En 2023, le Crous a servi plus de 40 millions de repas à des tarifs sociaux, parmi lesquels 22 millions étaient à 1 €, un prix réduit, accessible aux étudiants boursiers et précaires. Débuté dans un contexte difficile, ce dispositif a montré une attractivité croissante, répondant aux besoins des étudiants face aux hausses des coûts quotidiens. Ce succès a d’ailleurs amené le gouvernement à prolonger ce tarif pour l’année universitaire 2024. Au niveau des tarifs, les repas standards à 3,30 € ont aussi rencontré une forte demande avec 18 millions de repas servis, soit une augmentation de 11,9 % par rapport à l’année précédente
+                        </p>
+                        <hr class="section-divider">
+                        <h3 class="fw-bold padding-title"> Logement : augmentation de l’offre et rénovation </h3>
+                        <div class="text-center my-4">
+                            <img src="img/crous_logement.PNG" class="img-fluid rounded" style="max-width: 80%; height: auto;">
+                        </div>
+                        <p class="fs-4 custom-padding justifier">
+                        Le Crous est aussi un acteur majeur du logement étudiant, avec près de 174 691 places disponibles en 2023. En parallèle, plus de 3 500 places ont été rénovées cette année pour améliorer la qualité et le confort des lieux. Dans les résidences, le Crous s’engage à offrir des logements répondant aux critères de sécurité et de modernité. Ils sont proposés à des tarifs généralement inférieurs aux prix du marché, une aide précieuse pour les étudiants. En plus de tarifs attractifs, le Crous propose une gamme variée de types de logements, allant des chambres simples entre colocataires, aux studios équipés de salle de bain et cuisine individuelles, selon les besoins et le budget des étudiants.                        </p>
+
+                        <hr class="section-divider">
+                        <h3 class="fw-bold padding-title"> Bourses : un soutien financier vital </h3>
+                        <div class="text-center my-4">
+                            <img src="img/crous_echelon.PNG" class="img-fluid rounded" style="max-width: 80%; height: auto;">
+                        </div>
+                        <p class="fs-4 custom-padding justifier">
+                            En matière d’aide financière, le Crous accompagne près de 719 115 étudiants boursiers en 2023-2024. Grâce à une réforme appliquée cette année, les montants des bourses ont été augmentés pour mieux répondre aux besoins financiers. La revalorisation a permis à 18 % des étudiants de passer à un échelon supérieur, augmentant ainsi leur aide financière mensuelle.                            
+                        </p>
+
+                        <audio controls src="/sound/1.mp4" class="d-block mx-auto"></audio>
+
+                        <hr class="section-divider">
+                        <h3 class="fw-bold padding-title"> Le crous de l’IUT de Meaux </h3>
+                            
+                        <p class="fs-4 custom-padding justifier">
+                            À l'IUT de Meaux, le service de restauration du Crous a connu plusieurs évolutions. À l’origine, l’établissement bénéficiait d'une cantine Crous classique où les étudiants pouvaient déjeuner sur place. Cependant, face à un faible nombre de fréquentations, le service a été suspendu.
+                            <br>
+                            <br>
+                            En début d’année 2024, le Crous a revu le jour grâce à une pétition mise en place par les étudiants, il a été relancé sous une nouvelle forme pour mieux s’adapter aux besoins. Au départ, ce dispositif était géré par un groupe d’étudiants employé par l’université, leur permettant d’avoir une rentrée d’argent. Sa gestion à été reprise ensuite par des professionnels. 
+                            <br>
+                            <br>
+                            Le nouveau format, basé sur un système de "click-and-collect", permet aux étudiants de commander leur repa en ligne et de venir le récupérer sur place, dans la cantine de l’IUT. Chaque commande est livrée à le matin, puis placée dans un sac-repas à midi, pour un retrait rapide et pratique.  Bien que ce nouveau système ne soit pas celui de d'habitude, cela reste quand même efficace pour les étudiants de Meaux.
+                        </p>
+
+                        <audio controls src="/sound/2.mp4" class="d-block mx-auto"></audio>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-muted">Article réalisé par Yohan SOM</p>
+                <p class="text-muted">Source : <a href="https://www.lescrous.fr/rapport/rapport-dactivite-2023/">Rapport d'activité du CROUS</a></p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundAudio" loop>
+        <source src="sound/sound_crous.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+    
+</body>
+
+<script>
+    function toggleMenu() {
+            const menu = document.getElementById('offcanvasMenu');
+            menu.classList.toggle('active');
+        };
+
+        const audio = document.getElementById('backgroundAudio');
+    const soundToggle = document.getElementById('soundToggle');
+    const soundIcon = document.getElementById('soundIcon');
+    const volumeSlider = document.getElementById('volumeSlider');
+
+    // Démarrer le son par défaut
+    audio.play();
+    audio.volume = 0.3;
+
+    
+    soundToggle.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            soundIcon.classList.remove('fa-volume-mute');
+            soundIcon.classList.add('fa-volume-up');
+        } else {
+            audio.pause();
+            soundIcon.classList.remove('fa-volume-up');
+            soundIcon.classList.add('fa-volume-mute');
+        }
+    });
+
+    
+    volumeSlider.addEventListener('input', (e) => {
+        audio.volume = e.target.value;
+        
+        
+        if (e.target.value === '0') {
+            soundIcon.classList.remove('fa-volume-up');
+            soundIcon.classList.add('fa-volume-mute');
+        } else {
+            soundIcon.classList.remove('fa-volume-mute');
+            soundIcon.classList.add('fa-volume-up');
+        }
+    });
+
+</script>
+
+</html>
