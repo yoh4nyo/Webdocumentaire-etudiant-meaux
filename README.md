@@ -1,5 +1,7 @@
 # 📚 Webdocumentaire : Le Défi des Étudiants
 
+🌐 **[Accédez au site en ligne](https://yoh4nyo.github.io/Webdocumentaire-etudiant-meaux/)**
+
 ## 📖 Description
 
 Webdocumentaire interactif explorant **la gestion du budget étudiant à l'IUT de Meaux**. Ce projet met en lumière les défis financiers auxquels font face les étudiants et présente les ressources disponibles pour les accompagner.
