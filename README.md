@@ -1,19 +1,8 @@
 # 📚 Webdocumentaire : Le Défi des Étudiants
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
 ## 📖 Description
 
 Webdocumentaire interactif explorant **la gestion du budget étudiant à l'IUT de Meaux**. Ce projet met en lumière les défis financiers auxquels font face les étudiants et présente les ressources disponibles pour les accompagner.
-
-## ✨ Fonctionnalités
-
-- 🎬 **Vidéo de présentation** en arrière-plan
-- 📱 **Design responsive** adapté à tous les écrans
-- 🖼️ **Galerie interactive** avec témoignages étudiants
-- 📊 **Visualisations** de la situation financière étudiante
-- 🎨 **Interface moderne** avec animations fluides
-- 🔊 **Contenus audio** pour une expérience immersive
 
 ## 📁 Structure du projet
 
@@ -90,17 +79,10 @@ site_webdoc/
 
 ## 👥 Contributeurs
 
-- **Yohan SOM** - Développeur principal
-
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## 📧 Contact
-
-Pour toute question ou suggestion :
-- Email : yohan.som77@gmail.com
-- GitHub : [@yoh4nyo](https://github.com/yoh4nyo)
+- **Yohan SOM**
+- **Yannis CAMELIN**
+- **Mathias RAKOTOMAVO**
+- **Alexandre LOPERE**
 
 ---
 
